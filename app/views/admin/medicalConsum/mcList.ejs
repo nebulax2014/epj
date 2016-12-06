@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <link rel="stylesheet" href="/admin/css/app.min.css">
+    <link rel="stylesheet" href="/admin/css/rewrite.css">
+</head>
+<body>
+
+
+<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">产品列表</h1>
+</div>
+<div class="table-responsive">
+    <p>
+        <a href="/admin/mcAdd" class="btn m-b-xs btn-sm btn-info btn-addon"><i class="fa fa-plus"></i>添加</a>
+    </p>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+        <th>mc_name</th>
+        <th>mc_name_en</th>
+        <th>mc_name_short</th>
+        <th>mc_category</th>
+        <th>mc_brand</th>
+        <th>mc_item_no</th>
+        <th>mc_specification</th>
+        <th>mc_unit</th>
+        <th>mc_price</th>
+        <th>mc_dangerous_level</th>
+        <th>mc_des</th>
+        <th>mc_doc</th>
+        <th>mc_cas</th>
+        <th>mc_un</th>
+        <th>mc_img</th>
+        <th>mc_from</th>
+        <th>mc_save_envir</th>
+        <th>mc_url</th>
+        <th>mc_preps</th>
+        <th>操作</th>
+        </thead>
+        <tbody>
+        <% for(var i=0; i<dataList.length; i++){%>
+        <form class="form-horizontal" method="post" action="/admin/mcList">
+        <tr>
+            <td><%= dataList[i].mc_name %></td>
+            <td><%= dataList[i].mc_name_en %></td>
+            <td><%= dataList[i].mc_name_short %></td>
+            <td><%= dataList[i].mc_category %></td>
+            <td><%= dataList[i].mc_brand %></td>
+            <td><%= dataList[i].mc_item_no %></td>
+            <td><%= dataList[i].mc_specification %></td>
+            <td><%= dataList[i].mc_unit %></td>
+            <td><%= dataList[i].mc_price %></td>
+            <td><%= dataList[i].mc_dangerous_level %></td>
+            <td><%= dataList[i].mc_des %></td>
+            <td><%= dataList[i].mc_doc %></td>
+            <td><%= dataList[i].mc_cas %></td>
+            <td><%= dataList[i].mc_un %></td>
+            <td><%= dataList[i].mc_img %></td>
+            <td><%= dataList[i].mc_from %></td>
+            <td><%= dataList[i].mc_save_envir %></td>
+            <td><%= dataList[i].mc_url %></td>
+            <td><%= dataList[i].mc_preps %></td>
+            <td>
+                <input name="delete" type="hidden" value="<%= dataList[i]._id  %>" />
+                <a href="mcUpdate?id=<%= dataList[i]._id %>" class="btn btn-xs btn-primary btn-rounded"><i class="glyphicon glyphicon-pencil"></i> 编辑</a>
+                &nbsp;
+                <!--<button class="btn btn-xs btn-danger btn-rounded" type="submit"><i class="glyphicon glyphicon-trash"></i> 删除</button>-->
+                <a class="btn btn-xs btn-danger btn-rounded removeBtn"><i class="glyphicon glyphicon-trash"></i> 删除</a>
+                <div class="dialog">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">删除提示</h3>
+                        </div>
+                        <div class="panel-body">
+                            <span>是否删除</span>
+                            <button class="btn btn-xs btn-danger btn-rounded" type="submit"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </form>
+        <% }%>
+        </tbody>
+    </table>
+
+    <div class="paging">
+        <!--<button type="button" class="btn btn-default">首页</button>-->
+        <a href="?page=<%= pageNum-1%>" class="btn btn-default">上一页</a>　
+        <a href="?page=<%= pageNum+1%>" class="btn btn-default">下一页</a>
+        <!--<button type="button" class="btn btn-default">末页</button>-->
+    </div>
+</div>
+<div class="mark"></div>
+
+<script src="/admin/js/app.min.js" charset="utf-8"></script>
+<script>
+    $(function(){
+        $('.removeBtn').click(function(ev){
+            ev.preventDefault();
+            ev.stopPropagation();
+            $('.table').find('.dialog').removeClass('act');
+            $(this).next().addClass('act');
+            $('.mark').fadeIn(200);
+        });
+        $(document).click(function(){$('.table').find('.dialog').removeClass('act');$('.mark').fadeOut(200);});
+
+    });
+</script>
+</body>
+</html>

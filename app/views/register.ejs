@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+    <head>
+        <title></title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body id="body">
+        <div class="heading">
+            <p>AutoziFE</p>
+            <img src="../images/tour-icon2.png" />
+        </div>
+
+        <div class="panel panel-default dialog_center">
+            <div class="panel-heading">
+                <h3 class="panel-title">欢迎注册</h3>
+            </div>
+
+                <div class="form-bottom">
+                    <div class="form-group">
+                        <label class="sr-only" for="form-name">UserName</label>
+                        <input type="text" name="form-name" placeholder="请输入用户名" class="form-control" id="form-name">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="form-name">loginName</label>
+                        <input type="text" name="form-login" placeholder="请输入登录名" class="form-control" id="form-login">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="form-password">Password</label>
+                        <input type="password" name="form-password" placeholder="请输入密码" class="form-control" id="form-password">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="form-repeat-password">Repeat password</label>
+                        <input type="password" name="form-repeat-password" placeholder="再次输入密码" class="form-control" id="form-repeat-password">
+                    </div>
+                    <a href="javascript:;" class="btn-next">确认注册</a>
+                    <a href="/login" class="btn-resus">登陆</a>
+                </div>
+        </div>
+        <script src="/js/jquery-2.1.3.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+
+                $('.form-bottom').find('a').eq(0).click(function(){
+                    var userName = $('.form-bottom').find('input[name=form-name]').val();
+                    var loginName = $('.form-bottom').find('input[name=form-login]').val();
+                    var password = $('.form-bottom').find('input[name=form-password]').val();
+                    var passwords = $('.form-bottom').find('input[name=form-repeat-password]').val();
+                    var re = /^[\u4e00-\u9fa5a-z]+$/gi;//只能输入汉字和英文字母
+                    if (!re.test(userName)) {
+                        alert("只能输入汉字和英文字母");
+                        return false;
+                    }
+                    if(loginName==""||loginName.length<3){
+                        alert("登录名不能为空并且长度不能小于3");
+                        return false;
+                    }
+                    if(password=='' || passwords==''){
+                        alert("密码不能为空~");
+                        return;
+                    }
+                    if(password!=passwords){
+                        alert("密码不相同~");
+                        return;
+                    }else if(password==passwords){
+                        var data = {"uname":userName,"ulogin":loginName,"upassword":password};
+                        $.ajax({
+                            url:'/register',
+                            data:data,
+                            type:"post",
+                            success:function(status){
+                                alert(status.state);
+                                window.location.href = "/login";
+                            }
+                        });
+                    };
+
+                });
+
+            });
+        </script>
+    </body>
+</html>
+

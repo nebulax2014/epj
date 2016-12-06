@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <link rel="stylesheet" href="/admin/css/app.min.css">
+    <link rel="stylesheet" href="/admin/css/rewrite.css">
+    <link rel="stylesheet" href="/admin/css/comment.css">
+</head>
+<body>
+<div class="panel panel-default">
+    <div class="panel-heading font-bold">
+        添加产品
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" method="post" action="/admin/mcSave" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_name</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_name_en</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_name_en" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_name_short</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_name_short" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_category</label>
+                <div class="col-sm-8">
+                    <input name="mc_category" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_brand</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_brand" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_item_no</label>
+                <div class="col-sm-8">
+                    <input name="mc_item_no" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_specification</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_specification" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_unit</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_unit" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_price</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_price" class="form-control">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_dangerous_level</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_dangerous_level" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_des</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_des" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_doc</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_doc" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_cas</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_cas" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_un</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_un" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_img</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_img" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_from</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_from" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_save_envir</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_save_envir" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_url</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_url" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">mc_preps</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mc_preps" class="form-control">
+                </div>
+            </div>
+
+            
+            <div class="line line-dashed b-b line-lg pull-in line-margin"></div>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-4 text-center">
+                    <button type="submit" class="btn btn-default">取消</button>
+                    <button type="submit" class="btn btn-lg btn-primary btn-submit-width">保存</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="/admin/js/app.min.js" charset="utf-8"></script>
+<script src="/admin/js/ui-jp.js"></script>
+<script>
+$(function(){
+    $(".person option[value='<%= userName %>']").attr('selected',true);
+});
+</script>
+</body>
+</html>

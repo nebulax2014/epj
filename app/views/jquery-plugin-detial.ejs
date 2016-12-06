@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/css/fonts.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/font_icon/css/pe-icon-7-stroke.css" />
+		<link rel="stylesheet" href="/css/jquery-plugin-detial.css" />
+	</head>
+	<body>
+		<section class="content-wrap top70">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-md-12 col-sm-12">
+						<div class="project  highlight">
+							<div class="pe_top">
+								<h2><%= dataByTypeId.title %></h2>
+								<h5>所属分类：<%= dataByTypeId.categoryId %></h5>
+								<div class="pe_num">
+									<div class="">
+										<span><i class="pe-7s-look"></i> 535</span>
+										<span><i class="pe-7s-like"></i> 1</span>
+										<span><i class="pe-7s-chat"></i> 0</span>
+									</div>
+								</div>
+							</div>
+							<div class="project-content">
+								<img src="<%= dataByTypeId.Img %>" class="img-rounded" width="620">
+								<!--<img src="http://www.jq22.com/img/8.png" class="thumbile">-->
+							</div>
+							<div class="thumbile">
+	                            <a href="http://www.jq22.com/yanshi6693" target="_blank" class="btn btn-success"><i class="pe-7s-look"></i> &nbsp;查看演示</a>
+	                            <a href="<%= dataByTypeId.downLoadUrl %>" class="btn btn btn-danger" data-toggle="modal" data-target="#mydown"><i class="pe-7s-cloud-download"></i> &nbsp;立即下载</a>
+	                        </div>
+							<div class="thumbile detial">
+								<p><%= dataByTypeId.Describe %></p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-2" style="width: 200px; padding: 0;">
+						<div class="pe_t widget highlights">
+							<h6>PROMULGATOR</h6>
+							<a class="pe_header" href="#">
+								<img src="/images/40.png" />
+							</a>
+							<div class="pe_person">
+								<p>虚构丶</p>
+								<p><i class="pe-7s-map-marker"></i></p>
+							</div>
+							<button type="button" class="btn btn-z top20"><i class="pe-7s-plus"></i>关注作者(0)</button>
+							<button type="button" class="btn btn-z top20"><i class="pe-7s-like"></i>收藏此插件(9)</button>
+						</div>
+						<ul class="list-group" style="margin-bottom:10px">
+						  <div class="input-group">
+						    <input type="text" class="form-control" placeholder="搜索插件" style="height: 34px; margin-top: 8px;" id="searchtxt">
+						    <span class="input-group-btn">
+						    <button class="btn btn-default" type="button" id="seobut" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-left-width: 0px;"><i class="pe-7s-search"></i></button>
+						    </span> 
+						  </div>
+						</ul>
+						<div class="list-group">
+						  <a class="list-group-item on" href="http://www.jq22.com/jq1-jq1" data-para="time"><i class="pe-7s-flag"></i> &nbsp;最新发布</a>
+		                  <a class="list-group-item" href="http://www.jq22.com/jq1-jq4" data-para="comments"><i class="pe-7s-like"></i> &nbsp;最多收藏</a>
+		                  <a class="list-group-item" href="http://www.jq22.com/jq1-jq2" data-para="comments"><i class="pe-7s-comment"></i> &nbsp;最多评论</a>
+		                  <a class="list-group-item" href="http://www.jq22.com/jq1-jq3" data-para="downloads"><i class="pe-7s-bottom-arrow"></i> &nbsp;最多下载</a>
+		                  <a class="list-group-item" href="http://www.jq22.com/jq1-jq8" data-para="ie8"><i class="pe-7s-bicycle"></i> &nbsp;兼容IE8</a>
+		                  <a class="list-group-item" href="http://www.jq22.com/jq1-jq6" data-para="ie6"><i class="pe-7s-bicycle"></i> &nbsp;兼容IE6</a> 
+						</div>
+						<div class="list-group">
+						  <a href="#" class="list-group-item"><i class=""></i>最新发布</a>
+						  <a href="#" class="list-group-item"><i class=""></i>最多收藏</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</body>
+</html>

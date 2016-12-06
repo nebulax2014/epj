@@ -1,0 +1,21 @@
+i{ display: inline-block; font-weight: bold; padding-right: 5px;}
+body{ font-family: "微软雅黑";;}
+.highlight{ border:1px solid #ddd; border-radius: 4px; padding: 0;}
+.highlights{ border:1px solid #ddd; border-radius: 4px; padding: 0; padding: 15px;}
+.pe_t h6{ color: #A7A7A7; margin-top: 0;}
+.pe_top{  border-bottom: 1px solid #e8e8e8; border-radius: 3px 3px 0 0;border-top: 1px solid #fff;height: 135px;margin: auto;padding: 20px 25px 0;position: relative;}
+.pe_top h2{ margin: 0; font-size: 28px;color: #262626; font-weight: 600;line-height: 1.1;}
+.btn-z{ color: #333; background-color: #fff; border-color: #ccc; width: 100%;  border-radius: 6px; font-size: 14px;}
+.pe_t img{display: inline-block;margin-right: 10px;width: 50px;height: 50px;border-radius: 50px;float: left;}
+.pe_person{ display: inline-block;}
+.top10 { margin-top: 10px;}
+.top20 { margin-top: 10px;}
+.top70 { margin-top: 70px;}
+.fa {display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: inherit;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.thumbile {width: 100%; border-radius: 4px; margin: 20px 0; text-align: center;}
+.project-content {background-color: #FFF;padding-top: 30px;padding-right: 7.1%;padding-left: 7.1%;padding-bottom: 30px;border-radius: 4px; text-align: center;}
+.thumbile a {width: 22%;margin-left: 1%;margin-right: 1%;font-size: 1.5rem;line-height: 30px;}
+.project{ width: 96%;margin-left: 2%;margin-right: 2%;position: relative;}
+.pe_num span{  border-right: 1px solid #e8e8e8;display: inline-block; height: 20px;line-height: 20px;margin-right: 10px; padding-right: 10px;}
+.input-group-btn{ vertical-align: bottom;}
+.input-group-btn button{ margin: 0 !important;}
