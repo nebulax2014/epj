@@ -1,7 +1,9 @@
-## 中驰车福前端组件-服务端
-
-### cd到server目录 启动服务端
+## 中驰车福前端Nodejs基础框架
+## 基于Express、mongodb
+### 启动服务端
 >请确保数据库已经连接
+```bash
+$ config.js 配置mongodb
 ```bash
 $ npm(cnpm) install 自动安装依赖包
 ```
