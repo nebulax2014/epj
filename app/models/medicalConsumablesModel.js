@@ -5,6 +5,6 @@
 var mongoose = require('mongoose'),
     medicalConsumablesSchema = require('../schemas/medicalConsumablesSchema'),
 
-    medicalConsumablesModel = mongoose.model('medicalConsumables',medicalConsumablesSchema,'dbo.MedicalConsumables');
+    medicalConsumablesModel = mongoose.model('medicalConsumables', medicalConsumablesSchema, 'medicalConsumables');
 
 module.exports = medicalConsumablesModel;

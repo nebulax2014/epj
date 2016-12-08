@@ -1,5 +1,5 @@
 /**
- * author:autozi frontEnd team:liyong、大飞
+ * author:autozi frontEnd team:liyong、大飞、wusheng
  * date 
  */
 var express = require('express'),

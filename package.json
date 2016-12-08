@@ -1,7 +1,7 @@
 {
   "name": "autozi_fe",
   "version": "1.0.0",
-  "description": "中驰车福前端组件服务端",
+  "description": "autozi frontend team project template",
   "main": "app.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "component",
     "plugin"
   ],
-  "author": "autozi",
+  "author": "autozi frontend team",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.11.2",

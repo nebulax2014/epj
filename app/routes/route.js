@@ -5,13 +5,8 @@
 
 var index = require('../controllers/indexCtrl'),
     filter = require('../controllers/filterCtrl'),
-    typeCtrl = require('../controllers/typeCtrl')(),
-    detail_add = require('../controllers/admin/detailAddCtrl'),
-    listCtrl = require('../controllers/admin/listCtrl'),
     mcListCtrl = require('../controllers/admin/mcListCtrl'),
-    updateCtrl = require('../controllers/admin/updateCtrl'),
     admin = require('../controllers/admin/adminCtrl'),
-    visualCtrl = require('../controllers/admin/visualCtrl'),
     medicalConsum = require('../controllers/admin/medicalConsumCtrl'),
     mcUpdate = require('../controllers/admin/mcUpdateCtrl'),
     contact = require('../controllers/contactCtrl'),
@@ -34,27 +29,11 @@ module.exports = function (app) {
     });
     app.post('/admin/home', admin.save);
 
-    //列表list
-    app.get('/admin/list', listCtrl.query);
-    app.post('/admin/list', listCtrl.deleteByData);
-    //列表update
-    app.get('/admin/pluginUpdate', updateCtrl.query);
-    app.post('/admin/pluginUpdate', updateCtrl.save);
-
-    //详细add
-    app.get('/admin/detailAdd', detail_add.loadAdd);
-    //详细add
-    app.post('/admin/detailAdd', detail_add.addData);
-
     //用户user
     app.get('/admin/detailUser', function (req, res) {
         res.render('admin/detail/user', {});
     });
-    // app.post('/admin/addPlatform',platformCtrl);
 
-    //用户注册(admin)
-    //app.get('/admin', admin.loadAdmin);
-    //app.post('/admin',admin.admin);
 
     //登陆(login)
     app.get('/login', admin.loadLogin);
