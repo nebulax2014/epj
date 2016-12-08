@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');   //设置视图引擎
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use("/ueditor/ueditor", ueditor(path.join(__dirname, 'public'), function (req, res, next) {
+app.use("/ueditor/ueditor", ueditor(path.join(__dirname, 'public'), function(req, res, next) {
     // ueditor 客户发起上传图片请求
     if (req.query.action === 'uploadimage') {
         var foo = req.ueditor;
@@ -60,7 +60,7 @@ app.use(session({
     // })
 }));
 //1000*60*20
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     res.locals.user = req.session.admin;   // 从session 获取 user对象
     next();  //中间件传递
 });
@@ -73,7 +73,7 @@ require('./app/routes/route')(app);
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function (err, req, res, next) {
+    app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
@@ -84,7 +84,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function (err, req, res, next) {
+app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,
